@@ -9,7 +9,7 @@ This simple python based scripts helps to scrape SOLANA addresses into a json fi
 ## Guide
 1) Open 'Scrape' shortcut and follow the instructions as given
 2) Locate and click on the channel holding all your Solana addresses to be collected.
-3) Click download icon. Settings as shown: ![Example Settings: Partition limit = 200. Json format](https://github.com/Dean-Overton/solana-discord-nft-tools.git/DiscordChannelSolanaAddressScraper/Settings.PNG)
+3) Click download icon. Settings as shown: ![Example Settings: Partition limit = 200. Json format](https://github.com/Dean-Overton/solana-discord-nft-tools/blob/main/DiscordChannelSolanaAddressScraper/Settings.PNG)
 4) Export into the 'messages' folder.
 5) ```python SASD.py```
 6) 'AllUsernamesAddresses.json' contains all SOLANA addresses dropped in that channel!
