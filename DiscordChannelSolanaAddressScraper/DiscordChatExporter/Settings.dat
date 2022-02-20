@@ -1,0 +1,12 @@
+{
+  "IsAutoUpdateEnabled": true,
+  "IsDarkModeEnabled": false,
+  "IsTokenPersisted": false,
+  "DateFormat": "dd-MMM-yy hh:mm tt",
+  "ParallelLimit": 1,
+  "ShouldReuseMedia": false,
+  "LastExportFormat": 4,
+  "LastPartitionLimitValue": "200",
+  "LastMessageFilterValue": "-from:Dannyboy:1098 | -from:j0hn_sm1th.sol:3629 | -from:MEE6#4876",
+  "LastShouldDownloadMedia": false
+}
