@@ -3,7 +3,7 @@ import os
 import sys
 import re
 
-message_folder_name = 'FREEMINTADDRESSES20.2'
+message_folder_name = 'messages'
 
 def RemoveCrap (addressWithCrap):
 	newAddress = re.sub(r'[\W_]+', '', addressWithCrap)
@@ -24,8 +24,8 @@ for x in scraped_message_files:
 				filteredCrapWord = RemoveCrap(word)
 				wordLength = len(filteredCrapWord)
 				if(wordLength == 44):
-					print(filteredCrapWord)
 					mention = f"{message['author']['name']}#{message['author']['discriminator']}"
+					print(f"______{mention}______\n{filteredCrapWord}\n")
 					if any(obj['mention'] == mention or obj['address'] == filteredCrapWord for obj in data_dic):
 						continue
 					data_dic.append({"mention": mention, "address": filteredCrapWord})
