@@ -5,7 +5,7 @@ These simple python based scripts helps to send tokens to SOLANA addresses in a 
 ## Prerequisites
 - Have a __'AllUsernamesAddresses.json'__ located in this directory: 'WhitelistTokenSender/AllUsernamesAddresses.json'. [^structureofallusernames]
 - Have python installed [Install python here](https://www.python.org/downloads/)
-- Solana CLI tools with wallet that contains SOL hooked up. This will be debited for each whitelist token transfer fee. [Get started here](https://docs.solana.com/cli/install-solana-cli-tools#windows)
+- Solana CLI tools with wallet that contains SOL hooked up. This will be debited for each whitelist token transfer fee. [Get started here](https://docs.solana.com/cli/install-solana-cli-tools#windows), create a wallet and other documentation [here](https://docs.solana.com/cli)
 
 ## Guide
 
