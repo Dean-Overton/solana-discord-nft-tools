@@ -1,22 +1,22 @@
-# SOLANA Address Token Sender Tool (SAKS)
+# SOLANA DAO Token Sender Tool (SDAO)
 
-These simple python based scripts helps to send tokens to SOLANA addresses in a json file as collected in [SASD](https://github.com/Dean-Overton/solana-discord-nft-tools/tree/main/DiscordChannelSolanaAddressScraper) along with creating mention messages who have not received tokens.
+These simple python scripts helps to create a DAO!
 
 ## Prerequisites
-- Have a 'AllUsernamesAddresses.json' located in this directory: 'WhitelistTokenSender/AllUsernamesAddresses.json'. Structure: [{"mention": "username#2541", "address": "thisisanexampleaddressthatis44characterslong"}]. NOTE: mention values are not required for sending tokens and can be left blank.
+- Have a 'gib-holders.json' located in this directory: 'DAOHolderTokenSender/'. [Get the file here by entering the mint IDs.](https://pentacle.tools/holder-snapshot)
 - Have python installed.
 - Solana CLI tools with wallet that contains SOL hooked up. This will be debited for each whitelist token transfer fee.
 
 ## Guide
 
 ### ___________ Send.py ___________
-1) ```python3 Send.py "thisisanexampleaddressthatis44characterslong" 1``` This will send 1 token of address "thisisanexampleaddressthatis44characterslong" to each owner.
+1) ```python3 Send.py``` and follow the prompts.
 
 NOTES:
 - Allowing for accounts with 0 SOL in their wallet. By default, tokens will NOT send to SOLANA wallet addresses with 0 SOL in their wallet otherwise known as an '-unfunded-recipient'. You will need to open and edit 'Send.py' to change this.
 
 ### Search Current Token Holders 
-1) ```python SearchReceivedAddresses.py "thisisanexampleaddressthatis44characterslong"```
+1) ```python SearchReceivedAddresses.py```
 2) Outputs holders addresses to 'cache/Live Received Addresses.txt'
 3) To get the owners mentions continue below with ['mentioning holders'](https://github.com/Dean-Overton/solana-discord-nft-tools/tree/main/WhitelistTokenSender/README.md#Mention-Token-Holders)
 

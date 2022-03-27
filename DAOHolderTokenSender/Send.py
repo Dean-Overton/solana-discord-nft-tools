@@ -1,3 +1,22 @@
+######################################################################################################
+# Title: DAO Token Sender                                                                            #
+# Author: Dean Overton                                                                               #
+# Github : https://github.com/Dean-Overton                                                           #
+######################################################################################################
+
+print (""" 
+          ███████╗██████╗  █████╗  ██████╗ 
+          ██╔════╝██╔══██╗██╔══██╗██╔═══██╗
+          ███████╗██║  ██║███████║██║   ██║
+          ╚════██║██║  ██║██╔══██║██║   ██║
+          ███████║██████╔╝██║  ██║╚██████╔╝
+          ╚══════╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝ 
+                                                                                                                                                                                                                                                                                                            
+                   Dean Overton
+https://github.com/Dean-Overton/solana-discord-nft-tools
+
+""")
+
 from asyncio.windows_events import NULL
 from lib2to3.pgen2 import token
 import os
@@ -14,11 +33,14 @@ if (len(tokenaddress) != 44):
     sys.exit('\n !!! Ensure this is a valid token address. They are 44 chars long... !!!\n')
 
 tokensAmountPerNFTInput = input("Enter the AMOUNT of DAO tokens to send per each NFT owned. (Default: 1):")
+print(tokensAmountPerNFTInput)
+if tokensAmountPerNFTInput != None:
+    amountToSend = int(tokensAmountPerNFTInput)
+else:
+    tokensAmountPerNFT = 1
 tokensAmountPerNFT = int(tokensAmountPerNFTInput)
 if (tokensAmountPerNFT < 0):
     sys.exit('Amount must be bigger than zero.')
-if (tokensAmountPerNFTInput == ""):
-    tokensAmountPerNFT = 1
   
 print (f"Sending {tokensAmountPerNFT} {tokenaddress} DAO tokens per each NFT held...")
 
