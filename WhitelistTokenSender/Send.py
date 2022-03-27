@@ -7,10 +7,19 @@ receivedFile = "cache/Live Received Addresses.txt"
 mentionsAddressFile = "AllUsernamesAddresses.json"
 outfile = "cache/AddressesToSend.json"
 
-tokenaddress = sys.argv[1]
-amountToSend = sys.argv[2]
-        
-print (tokenaddress + "  -  " + amountToSend)
+tokenaddress = input("Please enter the whitelist token address (REQUIRED):")
+
+if (len(tokenaddress) != 44):
+    sys.exit('\n !!! Ensure this is a valid token address. They are 44 chars long... !!!\n')
+
+amountInput = input("Enter the AMOUNT of whitelist tokens to send to each address (Default: 1):")
+amountToSend = int(amountInput)
+if (amountToSend < 0):
+    sys.exit('Amount must be bigger than zero.')
+if (amountInput == ""):
+    amountToSend = 1
+
+print (f"Sending {amountToSend} {tokenaddress} tokens to each reciever.")
 
 with open(receivedFile, "r") as received:
     lines = received.readlines()
@@ -31,17 +40,13 @@ for x in json_load:
 with open(outfile, "w+") as un:
     json.dump(addressesToSend, un)
 
-if (len(tokenaddress) != 44):
-    print("\n !!! Ensure this is a token address. They are 44 chars long... This error may depreciate.  !!!\n")
-    sys.exit(2)
-
 with open(outfile) as data_file:    
     data = json.load(data_file)
     for x in data:
         # By default, this sends a token and funds creating the token account in the receiving account
         # but does not send the token if the receiving has 0 SOL in their wallet.
-        os.system(f"spl-token transfer --fund-recipient {tokenaddress} {amountToSend} {x['address']}")
-        
+        #os.system(f"spl-token transfer --fund-recipient {tokenaddress} {amountToSend} {x['address']}")
+        #print (x)
         # To send tokens and allow for wallets with 0 SOL. Comment out the above and uncomment
         # below:
-        # os.system(f"spl-token transfer --fund-recipient --allow-unfunded-recipient {tokenaddress} {amountToSend} {x['address']}")
+        os.system(f"spl-token transfer --fund-recipient --allow-unfunded-recipient {tokenaddress} {amountToSend} {x['address']}")

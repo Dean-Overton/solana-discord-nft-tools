@@ -12,7 +12,7 @@ def RemoveCrap (addressWithCrap):
 # To allow for partitioned json files as too long json files cant be read
 scraped_message_files = []
 for filename in os.listdir(message_folder_name):
-	with open(os.path.join(message_folder_name, filename), 'r', encoding='utf8') as f: # open in readonly mode
+	with open(os.path.join(message_folder_name, filename), 'r', encoding='utf8') as f:
 		scraped_message_files.append(json.load(f)['messages'])
 
 data_dic = []
@@ -27,8 +27,9 @@ for x in scraped_message_files:
 					mention = f"{message['author']['name']}#{message['author']['discriminator']}"
 					print(f"______{mention}______\n{filteredCrapWord}\n")
 					if any(obj['mention'] == mention or obj['address'] == filteredCrapWord for obj in data_dic):
-						continue
-					data_dic.append({"mention": mention, "address": filteredCrapWord})
+						print(f"Sent again: {filteredCrapWord} from {mention}")
+					else:
+						data_dic.append({"mention": mention, "address": filteredCrapWord})
 
 print (f"Addresses: {len(data_dic)}")
 # Serializing json 
