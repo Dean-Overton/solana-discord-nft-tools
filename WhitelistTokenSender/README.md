@@ -10,12 +10,12 @@ These simple python based scripts helps to send tokens to SOLANA addresses in a 
 ## Guide
 
 ### Send.py
-1) ```python3 Send.py "thisisanexampleaddressthatis44characterslong" 1``` This will send 1 token of address "thisisanexampleaddressthatis44characterslong" to each owner.
+1) ```python3 Send.py``` and follow the prompts.
 
 Accounts with 0 SOL will have the wallet flagged. [^0sol]
 
 ### Search Current Token Holders 
-1) ```python SearchReceivedAddresses.py "thisisanexampleaddressthatis44characterslong"```
+1) ```python SearchReceivedAddresses.py``` and follow the prompts.
 2) Outputs holders addresses to 'cache/Live Received Addresses.txt'
 3) To get the owners mentions continue below with ['mentioning holders'](https://github.com/Dean-Overton/solana-discord-nft-tools/tree/main/WhitelistTokenSender/README.md#Mention-Token-Holders)
 

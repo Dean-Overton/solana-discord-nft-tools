@@ -1,3 +1,22 @@
+######################################################################################################
+# Title: Whitelist Token Sender                                                                      #
+# Author: Dean Overton                                                                               #
+# Github : https://github.com/Dean-Overton                                                           #
+######################################################################################################
+
+print (""" 
+        ███████╗ █████╗ ██╗  ██╗███████╗
+        ██╔════╝██╔══██╗██║ ██╔╝██╔════╝
+        ███████╗███████║█████╔╝ ███████╗
+        ╚════██║██╔══██║██╔═██╗ ╚════██║
+        ███████║██║  ██║██║  ██╗███████║
+        ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝                                                                                                                                                                                                   
+                                                                            
+                   Dean Overton
+https://github.com/Dean-Overton/solana-discord-nft-tools
+
+""")
+
 from asyncio.windows_events import NULL
 import os
 import json
@@ -13,11 +32,13 @@ if (len(tokenaddress) != 44):
     sys.exit('\n !!! Ensure this is a valid token address. They are 44 chars long... !!!\n')
 
 amountInput = input("Enter the AMOUNT of whitelist tokens to send to each address (Default: 1):")
-amountToSend = int(amountInput)
+if amountInput != "":
+    amountToSend = int(amountInput)
+else:
+    amountToSend = 1
 if (amountToSend < 0):
     sys.exit('Amount must be bigger than zero.')
-if (amountInput == ""):
-    amountToSend = 1
+    
 
 print (f"Sending {amountToSend} {tokenaddress} tokens to each reciever.")
 
