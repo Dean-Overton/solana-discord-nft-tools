@@ -13,7 +13,7 @@ These simple python scripts helps to create a DAO!
 1) ```python3 Send.py``` and follow the prompts.
 
 NOTES:
-- Allowing for accounts with 0 SOL in their wallet. By default, tokens will NOT send to SOLANA wallet addresses with 0 SOL in their wallet otherwise known as an '-unfunded-recipient'. You will need to open and edit 'Send.py' to change this.
+- By default, wallet addresses with 0 SOL (unfunded recipients) are flagged and not sent.
 
 ### Search Current Token Holders 
 1) ```python SearchReceivedAddresses.py```

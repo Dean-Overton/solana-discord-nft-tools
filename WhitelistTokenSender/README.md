@@ -12,7 +12,8 @@ These simple python based scripts helps to send tokens to SOLANA addresses in a 
 ### Send.py
 1) ```python3 Send.py``` and follow the prompts.
 
-Accounts with 0 SOL will have the wallet flagged. [^0sol]
+NOTES:
+- By default, wallet addresses with 0 SOL (unfunded recipients) are flagged and not sent.
 
 ### Search Current Token Holders 
 1) ```python SearchReceivedAddresses.py``` and follow the prompts.
@@ -27,6 +28,5 @@ NOTES:
 2) Creates 'MentionMessage.txt' message with @usernames list.[^message]
 
 [^structureofallusernames]: __Structure:__ [{"mention": "username#2541", "address": "thisisanexampleaddressthatis44characterslong"} , {"mention": ...}]. <br> __NOTE:__ mention values are not required for sending tokens and can be left blank.
-[^0sol]: Allowing for accounts with 0 SOL in their wallet. By default, tokens will NOT send to SOLANA wallet addresses with 0 SOL in their wallet otherwise known as an '-unfunded-recipient'. You will need to open and edit 'Send.py' to change this by adding 'allow-unfunded-recipient'.
 [^solscanlimits]: Solscans public API limits requests to 5 requests/second. Searching the current receivers utilizes their public program which is very popular. May update this in the future to use a custom program for much faster results.
 [^message]: This is helpful for creating a message for discord with large amounts of holders that have 0 SOL in their wallet. Many NFT buyers commonly have burner wallets which may mean you want to follow changing to allow sending whitelist to them. [^0sol]
