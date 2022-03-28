@@ -22,6 +22,7 @@ NOTES:
 
 NOTES: 
 - Utilising Solscan public API (5 requests/second)
+- These current holders include your own addresses (You may not want to send WL to yourself)!
 
 ### Mention Token Holders 
 1) ```python MentionHolders.py```

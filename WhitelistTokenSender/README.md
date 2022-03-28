@@ -22,6 +22,7 @@ NOTES:
 
 NOTES: 
 - Slow in-depth search process due to solscan public API request limits [^solscanlimits]
+- These current holders include your own addresses!
 
 ### Mention Token Holders 
 1) ```python MentionHolders.py```
