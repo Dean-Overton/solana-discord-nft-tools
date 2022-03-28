@@ -16,3 +16,9 @@ Send tokens including whitelist tokens to a list of addresses.
 Start a DAO, send tokens to a list of addresses per each NFT they own.
 
 [DAOHolderTokenSender](https://github.com/Dean-Overton/solana-discord-nft-tools/tree/main/DAOHolderTokenSender)
+
+# HELP
+Please feel free to contribute to this repository!
+
+- Submit an issue [here](https://github.com/Dean-Overton/solana-discord-nft-tools/issues).
+- Fork the repository and make a pull request.
