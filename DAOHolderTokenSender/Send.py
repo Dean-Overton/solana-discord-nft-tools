@@ -18,7 +18,7 @@ https://github.com/Dean-Overton/solana-discord-nft-tools
 """)
 
 from asyncio.windows_events import NULL
-from colorama import init, Fore, Back
+from colorama import init, Fore
 init()
 import os
 import json

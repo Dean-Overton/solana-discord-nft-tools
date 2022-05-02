@@ -1,1 +1,5 @@
 **/keypair.json
+
+DiscordChannelSolanaAddressScraper/messages/*.json
+
+blacklist.txt

@@ -28,22 +28,6 @@ receivedFile = "cache/Live Received Addresses.txt"
 mentionsAddressFile = "AllUsernamesAddresses.json"
 outfile = "cache/AddressesToSend.json"
 
-
-tokenaddress = input("Please enter the whitelist token address (REQUIRED):").lower().strip()
-
-if len(tokenaddress) != 44:
-    sys.exit('\n !!! Ensure this is a valid token address. They are 44 chars long... !!!\n')
-
-
-amountInput = input("Enter the AMOUNT of whitelist tokens to send to each address (Default: 1):")
-if amountInput != "":
-    amountToSend = int(amountInput)
-else:
-    amountToSend = 1
-if (amountToSend < 0):
-    sys.exit('Amount must be bigger than zero.')
-    
-
 def askYesNoQuestion(question):
   YesNoAnswer = input(question).lower()
   if YesNoAnswer in ['yes', 'y', 'no', 'n']:
@@ -51,41 +35,60 @@ def askYesNoQuestion(question):
   else:
      return askYesNoQuestion(question)
 
+def main():
+    tokenAddressInput = input("Please enter the whitelist token address (REQUIRED):")
 
-G  = '\033[32m' # green
-R  = '\033[31m' # red
-allowUnfundedInput = askYesNoQuestion(f"{Fore.WHITE} Allow addresses with 0 SOL in them (unfunded recipients)? [{Fore.GREEN}y{Fore.WHITE}, {Fore.RED}n{Fore.WHITE}]")
-if allowUnfundedInput.lower() in ['yes', 'y']:
-    allowUnfunded = True
-if allowUnfundedInput.lower() in ['no', 'n']:
-    allowUnfunded = False
+    if tokenAddressInput == False or len(tokenAddressInput) != 44:
+        sys.exit('\n !!! Ensure this is a valid token address. They are 44 chars long... !!!\n')
+
+    tokenaddress = tokenAddressInput.lower().strip()
+
+    amountInput = input("Enter the AMOUNT of whitelist tokens to send to each address (Default: 1):")
+    if amountInput:
+        amountToSend = int(amountInput)
+    else:
+        amountToSend = 1
+        print("Setting to DEFAULT amount of 1")
+    if (amountToSend < 0):
+        sys.exit('Amount must be bigger than zero.')
+
+    G  = '\033[32m' # green
+    R  = '\033[31m' # red
+    allowUnfundedInput = askYesNoQuestion(f"{Fore.WHITE} Allow addresses with 0 SOL in them (unfunded recipients)? [{Fore.GREEN}y{Fore.WHITE}, {Fore.RED}n{Fore.WHITE}]")
+    if allowUnfundedInput.lower() in ['yes', 'y']:
+        allowUnfunded = True
+    if allowUnfundedInput.lower() in ['no', 'n']:
+        allowUnfunded = False
 
 
-print (f"Sending {amountToSend} {tokenaddress} tokens to each reciever.")
+    print (f"Sending {amountToSend} {tokenaddress} tokens to each reciever.")
 
-with open(receivedFile, "r") as received:
-    lines = received.readlines()
+    with open(receivedFile, "r") as received:
+        lines = received.readlines()
 
-loadedReceived = []
-for line in lines:
-    loadedReceived.append(line.strip('\n'))
+    loadedReceived = []
+    for line in lines:
+        loadedReceived.append(line.strip('\n'))
 
-addressesToSend = []
+    addressesToSend = []
 
-with open(mentionsAddressFile, 'r', encoding='utf8') as jsonfile:
-	json_load = json.load(jsonfile)
+    with open(mentionsAddressFile, 'r', encoding='utf8') as jsonfile:
+        json_load = json.load(jsonfile)
 
-for x in json_load:
-    if (x['address'] not in loadedReceived):
-        addressesToSend.append({"mention": x['mention'], "address": x['address']})
+    for x in json_load:
+        if (x['address'] not in loadedReceived):
+            addressesToSend.append({"mention": x['mention'], "address": x['address']})
 
-with open(outfile, "w+") as un:
-    json.dump(addressesToSend, un)
+    with open(outfile, "w+") as un:
+        json.dump(addressesToSend, un)
 
-with open(outfile) as data_file:    
-    data = json.load(data_file)
-    for x in data:
-        if (allowUnfunded):
-            os.system(f"spl-token transfer --fund-recipient --allow-unfunded-recipient {tokenaddress} {amountToSend} {x['address']}")
-        else:
-            os.system(f"spl-token transfer --fund-recipient {tokenaddress} {amountToSend} {x['address']}")
+    with open(outfile) as data_file:    
+        data = json.load(data_file)
+        for x in data:
+            if (allowUnfunded):
+                os.system(f"spl-token transfer --fund-recipient --allow-unfunded-recipient {tokenaddress} {amountToSend} {x['address']}")
+            else:
+                os.system(f"spl-token transfer --fund-recipient {tokenaddress} {amountToSend} {x['address']}")
+
+if __name__ == "__main__":
+	main()

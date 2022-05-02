@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "DiscordChatExporter/2.33.2": {
+      "DiscordChatExporter/2.34": {
         "dependencies": {
-          "DiscordChatExporter.Core": "2.33.2",
+          "DiscordChatExporter.Core": "2.34.0",
           "DotnetRuntimeBootstrapper": "2.2.0",
           "Gress": "2.0.1",
-          "MaterialDesignColors": "2.0.4",
-          "MaterialDesignThemes": "4.3.0",
+          "MaterialDesignColors": "2.0.5",
+          "MaterialDesignThemes": "4.4.0",
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
           "Onova": "2.6.2",
           "Ookii.Dialogs.Wpf": "5.0.1",
@@ -42,22 +42,22 @@
           }
         }
       },
-      "MaterialDesignColors/2.0.4": {
+      "MaterialDesignColors/2.0.5": {
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {
-            "assemblyVersion": "2.0.4.3",
-            "fileVersion": "2.0.4.3"
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
           }
         }
       },
-      "MaterialDesignThemes/4.3.0": {
+      "MaterialDesignThemes/4.4.0": {
         "dependencies": {
-          "MaterialDesignColors": "2.0.4"
+          "MaterialDesignColors": "2.0.5"
         },
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
-            "assemblyVersion": "4.3.0.3",
-            "fileVersion": "4.3.0.3"
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.4.0.0"
           }
         }
       },
@@ -103,16 +103,16 @@
           }
         }
       },
-      "MiniRazor.CodeGen/2.2.0": {
+      "MiniRazor.CodeGen/2.2.1": {
         "dependencies": {
-          "MiniRazor.Runtime": "2.2.0"
+          "MiniRazor.Runtime": "2.2.1"
         }
       },
-      "MiniRazor.Runtime/2.2.0": {
+      "MiniRazor.Runtime/2.2.1": {
         "runtime": {
           "lib/netstandard2.0/MiniRazor.Runtime.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.0"
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
           }
         }
       },
@@ -953,11 +953,11 @@
           }
         }
       },
-      "DiscordChatExporter.Core/2.33.2": {
+      "DiscordChatExporter.Core/2.34.0": {
         "dependencies": {
           "Gress": "2.0.1",
           "JsonExtensions": "1.2.0",
-          "MiniRazor.CodeGen": "2.2.0",
+          "MiniRazor.CodeGen": "2.2.1",
           "Polly": "7.2.3",
           "Superpower": "3.0.0"
         },
@@ -968,7 +968,7 @@
     }
   },
   "libraries": {
-    "DiscordChatExporter/2.33.2": {
+    "DiscordChatExporter/2.34": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1001,19 +1001,19 @@
       "path": "jsonextensions/1.2.0",
       "hashPath": "jsonextensions.1.2.0.nupkg.sha512"
     },
-    "MaterialDesignColors/2.0.4": {
+    "MaterialDesignColors/2.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
-      "path": "materialdesigncolors/2.0.4",
-      "hashPath": "materialdesigncolors.2.0.4.nupkg.sha512"
+      "sha512": "sha512-y5gEo4wo46CTiaTOiROPoKqTW5LJAu0g6b+yd0MslS3Fppu6hMheOIIkrmvvpFPbC4jbgAwakYYCzPKWbHC4LQ==",
+      "path": "materialdesigncolors/2.0.5",
+      "hashPath": "materialdesigncolors.2.0.5.nupkg.sha512"
     },
-    "MaterialDesignThemes/4.3.0": {
+    "MaterialDesignThemes/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
-      "path": "materialdesignthemes/4.3.0",
-      "hashPath": "materialdesignthemes.4.3.0.nupkg.sha512"
+      "sha512": "sha512-VdO8WvCYB6A6cDd181HLVgORn2IeNDMTlGxf2x91S1xsK6JYY3L1+WYxrkLJm4XEuvI0mY0biLM8MS6go+PQcw==",
+      "path": "materialdesignthemes/4.4.0",
+      "hashPath": "materialdesignthemes.4.4.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
@@ -1057,19 +1057,19 @@
       "path": "microsoft.xaml.behaviors.wpf/1.1.39",
       "hashPath": "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
     },
-    "MiniRazor.CodeGen/2.2.0": {
+    "MiniRazor.CodeGen/2.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VBV4W4cszTSJBgCk8b9eHMOdsUcumYOGJ09jMK0Wz6M5xO7cmlm8r/QuPIkDMR6+TYM3uT/EVOA8UhbW7BL09g==",
-      "path": "minirazor.codegen/2.2.0",
-      "hashPath": "minirazor.codegen.2.2.0.nupkg.sha512"
+      "sha512": "sha512-7fZK5WySPHQDQRFux2IDzeHF+ggK7Yu7ethyJr1CSwLYsuJY3H0DsTJlxeqNvLg+rCFRaPyV8KENiE/KN1sYDg==",
+      "path": "minirazor.codegen/2.2.1",
+      "hashPath": "minirazor.codegen.2.2.1.nupkg.sha512"
     },
-    "MiniRazor.Runtime/2.2.0": {
+    "MiniRazor.Runtime/2.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BUrgFWnCA5IsH3rs0MmK1qb/KcvxcoINb4nfPdyt8hp8Z0cVsgv69CKsLPmWhYLgI4BSjFYRsq8OFxy2DYfsXQ==",
-      "path": "minirazor.runtime/2.2.0",
-      "hashPath": "minirazor.runtime.2.2.0.nupkg.sha512"
+      "sha512": "sha512-CXUlv4G42pNNVj1KeI64EPdGrsmpSRUiEVnhO/4UXMoVxi7AqLmSzb7UbpdJ/apxItJQ/r3VjXklWVYAks5Wdg==",
+      "path": "minirazor.runtime/2.2.1",
+      "hashPath": "minirazor.runtime.2.2.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
@@ -1687,7 +1687,7 @@
       "path": "tyrrrz.settings/1.3.4",
       "hashPath": "tyrrrz.settings.1.3.4.nupkg.sha512"
     },
-    "DiscordChatExporter.Core/2.33.2": {
+    "DiscordChatExporter.Core/2.34.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
