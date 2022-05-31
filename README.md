@@ -1,4 +1,4 @@
-# Solana Discord NFT Tools
+# Solana Discord NFT Tools ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&count_bg=%23C59FFF&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false)
 
 These tools might help out for SOLANA NFT projects.
 
